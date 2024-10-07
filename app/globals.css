@@ -1,27 +1,195 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Pacifico&display=swap');
+
+*{margin: 0;padding: 0;}
+h1{
+  background-color: pink;
+  color: white;
+  text-align: center;
+  width: 100%;
+  font-family: "Happy Monkey", system-ui;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* span{
+  font-family: "Happy Monkey", system-ui;
+} */
+
+button{
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+}
+.pr{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cont{
+  background-color: lightblue;
+  display:flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  padding: 20px;
+  width: 70%;
+  height: 300px;
+  justify-content: space-around;
+  font-size: larger;
+  border-radius: 20px;
+  border: 1px solid lightpink;
+  font-family: "Happy Monkey", system-ui;
+}
+.kh{
+  align-self: center;
+}
+
+.kh2{
+  align-self: flex-end;
+}
+span{
+  font-size: 20px;
+  font-family: "Pacifico", cursive;}
+
+.img{
+  width: 50%;
+  height: 350px;
+  position: relative;
+}
+.mn{
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  /* z-index: 10; */
+  /* align-items: center; */
+}
+
+
+
+.img img{
+  position: absolute;
+  left: -1000px;
+  z-index: 10;
+  animation: ani 5s ease 1s 1 forwards;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+}
+
+@keyframes ani{
+  25%{
+    left: -700px;
+  
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  50%{
+    left: -300px;
+  
   }
+
+  75%{
+    left: -20px;
+    
+  }
+  100%{
+    left: 0;
+    /* bottom: 10px; */
+  }
+  
 }
+
+.wishes{
+  position: absolute;
+  top: 0;
+   background-color: black;
+   color: white;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  justify-content: space-around;
+  /* height: 500p; */
+}
+
+.w1,.w12{
+   /* border: 1px solid black; */
+  display: flex;
+  flex: 20%;
+  justify-content: space-around;
+  padding: 4%;
+  text-align: center;
+  text-transform:uppercase;
+  font-family: "Pacifico", cursive;
+ 
+}
+
+.fl1{
+  animation: fluck 3s ease-in-out 1s infinite forwards ;
+}
+
+
+@keyframes fluck {
+
+  from{
+  color: gold;
+  }
+  to{
+    color: lightcoral;
+  }
+  
+}
+
+
+.fl2{
+  animation: flur 2s ease-in-out 1s infinite forwards ;
+}
+
+
+@keyframes flur {
+
+  from{
+  color:#ffc9ed;
+  }
+  to{
+    color: #9cdaa4;
+  }
+  
+}
+
+
+
+.fl3{
+  animation: flag 3.5s ease-in-out 1s infinite forwards ;
+}
+
+
+@keyframes flag {
+
+  from{
+  color: #f3548c;
+  }
+  to{
+    color:#b294a8;
+  }
+  
+}
+
+
+
+.fl4{
+  animation: flut 2.5s ease-in-out 1s infinite forwards ;
+}
+
+
+@keyframes flut {
+
+  from{
+  color: #ffc2ae;
+  }
+  to{
+    color:orange;
+  }
+  
+}
+
+
+
+
