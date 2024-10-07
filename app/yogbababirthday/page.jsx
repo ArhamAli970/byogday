@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Gburstag(){
     return(
         
@@ -11,7 +13,9 @@ export default function Gburstag(){
 
         <div className="mn">
         <div className="img">
-            <img src="/images/yog.jpg" alt="not fnd" />
+          <div className="im">
+        <Image src="/images/yog.jpg"  alt="Description"   objectFit="contain"  layout="fill" />
+        </div>
         </div>
         </div>
 
